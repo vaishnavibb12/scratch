@@ -1,0 +1,65 @@
+.section.sd {
+  background-image: url("https://gammadecor.ru/d/D2-027_%D1%82%D1%8E%D0%BB%D1%8C%D0%BF%D0%B0%D0%BD%D1%8B_300%D1%85147.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 460px;
+  position: relative;
+}
+.container {
+  max-width: 1400px;
+}
+.overimage {
+  width: 760px;
+  background-color: #fff;
+  /* flex: 0 0 706px; */
+  padding: 45px 20px 45px 20px;
+  position: absolute;
+  height: auto;
+  top: 25%;
+  transform: translatex(60%);
+  box-shadow: 15px 15px darkred;
+  /* z-index: 2; */
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center img {
+  animation: spin 4s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .overimage {
+    width: 73%;
+
+    position: absolute;
+    top: 11%;
+    transform: translatex(17%);
+  }
+  .right {
+    flex-direction: column;
+  }
+  .center img {
+    animation: none;
+  }
+}
+.section-height {
+  width: 100%;
+  height: 100%;
+}
+/* @media screen and (max-width: 400px) {
+  .background-image {
+    height: 20vh;
+  }
+} */

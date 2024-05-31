@@ -1,0 +1,27 @@
+.section.df {
+  background-image: url("https://jooinn.com/images/green-organic-background-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.math {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.count {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+
+  /* height: 100%; */
+}
+.col-lg-2.hj {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}

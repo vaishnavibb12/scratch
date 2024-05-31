@@ -1,0 +1,13 @@
+.slide h1 {
+  position: absolute;
+
+  z-index: 72;
+  top: 460px;
+  left: 600px;
+  font-size: 84px;
+  color: white;
+  text-align: center;
+}
+.slide img {
+  position: relative;
+}

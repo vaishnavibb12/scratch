@@ -1,0 +1,35 @@
+.rightimg img {
+  width: 100%;
+}
+h2.about-heading {
+  font-size: 36px;
+  padding: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: darkred;
+  /* height: -webkit-fill-available; */
+  font-family: cursive;
+}
+ul.reason-list li {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ul.reason-list li span {
+  background: #0dcaf0;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border: 1px black solid;
+  border-style: dashed;
+  border-radius: inherit;
+}
+button.btn.btn-primary {
+  background: darkred;
+  border: white;
+}
+.section {
+  padding: 60px 20px 60px 20px;
+}
