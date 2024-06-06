@@ -11,6 +11,7 @@
   text-align: center;
   padding: 20px;
   border-radius: 20px;
+  margin-top: 15px;
 }
 .count {
   flex-direction: column;

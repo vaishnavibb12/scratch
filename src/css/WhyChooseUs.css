@@ -63,3 +63,13 @@
     height: 20vh;
   }
 } */
+
+@media screen and (max-width: 500px) {
+  .overimage {
+    width: 118%;
+    position: absolute;
+    top: 0%;
+    transform: translatex(-14%);
+    padding: 10px;
+  }
+}
