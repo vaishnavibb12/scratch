@@ -4,8 +4,11 @@ import Contactdemo from "./Contactdemo";
 import Email from "./Email";
 import Addressdemo from "./Addressdemo";
 import { Routes, Route, Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
+  const notify = () => toast("Message Send Sucessfully😁👍!");
   return (
     <div className="section">
       <div className="container">
@@ -25,6 +28,7 @@ function Contact() {
                 <Link to="/Email">Email</Link>
                 <Link to="/Addressdemo">Address</Link>
               </div>
+
               <Routes>
                 <Route path="/Addressdemo" element={<Addressdemo />} />
                 <Route path="/Email" element={<Email />} />
@@ -74,9 +78,14 @@ function Contact() {
                 </div>
                 <div className="col-md-12">
                   <fieldset>
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      onClick={notify}
+                      type="button"
+                      className="btn btn-primary"
+                    >
                       Submit
                     </button>
+                    <ToastContainer />
                   </fieldset>
                 </div>
               </form>

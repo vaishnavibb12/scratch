@@ -1,0 +1,70 @@
+.color {
+  background: yellow;
+  height: 300px;
+  border-radius: 10px;
+}
+.color-de {
+  background: lightskyblue;
+  height: 300px;
+  border-radius: 10px;
+}
+.fghj {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+}
+
+.map {
+  width: 100%;
+  height: 560px;
+}
+.zxc {
+  width: 55%;
+}
+.asd {
+  width: 45%;
+  background: #9bc597;
+  position: relative;
+  height: 560px;
+}
+.new {
+  display: flex;
+  justify-content: center;
+}
+.input-form.sd {
+  position: absolute;
+  left: -360px;
+  top: 45px;
+  background: #fff;
+}
+.emo.mk {
+  border: none;
+}
+.emo.mk p {
+  padding: 20px;
+  font-size: 18px;
+}
+.emo.mk svg {
+  animation-duration: 3s;
+  animation-name: example;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    .emo.mk svg {
+      transform: translate(1);
+    }
+  }
+  50% {
+    .emo.mk svg {
+      transform: translate(1.2);
+    }
+  }
+  100% {
+    .emo.mk svg {
+      transform: translate(1);
+    }
+  }
+}

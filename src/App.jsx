@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import { BrowserRouter } from "react-router-dom";
 import Carreer from "./components/Carreer";
 import Footer from "./components/Footer";
+import Getintouch from "./components/Getintouch";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Slider />
         <About />
+        <Getintouch />
         <Products />
         <ClientReview />
         <WhyChooseUs />
