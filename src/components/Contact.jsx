@@ -6,20 +6,37 @@ import Addressdemo from "./Addressdemo";
 import { Routes, Route, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const notify = () => toast("Message Send Sucessfully😁👍!");
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     password: "",
     confirmPassword: "",
   });
+  const form = useRef();
 
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_sxtx7vd", "template_z44etsf", form.current, {
+        publicKey: "poPJWNtvXf5cjhB5j",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -47,14 +64,14 @@ function Contact() {
   const validateForm = (data) => {
     const errors = {};
 
-    if (!data.username.trim()) {
-      errors.username = "Username is required";
+    if (!data.user_name.trim()) {
+      errors.user_name = "user_name is required";
     }
 
-    if (!data.email.trim()) {
-      errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
-      errors.email = "Email is invalid";
+    if (!data.user_email.trim()) {
+      errors.user_email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(data.user_email)) {
+      errors.user_email = "Email is invalid";
     }
 
     if (!data.password) {
@@ -101,31 +118,31 @@ function Contact() {
 
           <div className="col-lg-4">
             <div className="input-form">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={form}>
                 <div className="col-lg-12">
                   <fieldset>
                     <input
                       className="form-input"
                       type="text"
                       placeholder="User Name"
-                      name="username"
-                      value={formData.username}
+                      name="user_name"
+                      value={formData.user_name}
                       onChange={handleChange}
                     />
-                    {errors.username && (
-                      <span className="error-message">{errors.username}</span>
+                    {errors.user_name && (
+                      <span className="error-message">{errors.user_name}</span>
                     )}
                     <br />
                     <input
                       className="form-input"
                       placeholder="Email"
                       type="email"
-                      name="email"
-                      value={formData.email}
+                      name="user_email"
+                      value={formData.user_email}
                       onChange={handleChange}
                     />
-                    {errors.email && (
-                      <span className="error-message">{errors.email}</span>
+                    {errors.user_email && (
+                      <span className="error-message">{errors.user_email}</span>
                     )}
                     <br />
                     <input
@@ -156,7 +173,11 @@ function Contact() {
                 </div> */}
                 <div className="col-md-12">
                   <fieldset>
-                    <button type="submit" className="btn btn-primary">
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      value="Send"
+                    >
                       Submit
                     </button>
                     <ToastContainer />
